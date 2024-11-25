@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas - Adicionar Produto</title>
+    <link rel="stylesheet" href="/produtos/styles.css">
+</head>
+<body>
+    <h1>Adicionar Novo Produto</h1>
+    <form action="/produtos/adicionar_produto" method="POST">
+        <input type="text" name="tipo_de_peca" placeholder="Tipo de Peça" required>
+        <input type="number" name="fornecedor_id" placeholder="ID do Fornecedor" required>
+        <input type="number" name="custo_aquisicao" placeholder="Custo de Aquisição" required>
+        <input type="number" name="custo_marketing" placeholder="Custo de Marketing" required>
+        <input type="number" name="margem_de_lucro" placeholder="Margem de Lucro" required>
+        <input type="number" name="preco_de_venda" placeholder="Preço de Venda" required>
+        <input type="number" name="despesas" placeholder="Despesas" required>
+        <input type="number" name="q_em_estoque" placeholder="Quantidade em Estoque" required>
+        <button type="submit">Adicionar Produto</button>
+    </form>
+</body>
+</html>

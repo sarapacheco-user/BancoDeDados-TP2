@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <link rel="stylesheet" href="/display/styles.css">
+</head>
+<body>
+    <h1>Data Visualization</h1>
+    <form action="/visualize" method="POST">
+        <label for="table">Select Table:</label>
+        <select id="table" name="table" required>
+            <option value="Pedido">Pedido</option>
+            <option value="ClienteCadastrado">ClienteCadastrado</option>
+            <option value="Produto">Produto</option>
+            <option value="Funcionario">Funcionario</option>
+            <option value="Sede">Sede</option>
+            <option value="Fornecedor">Fornecedor</option>
+        </select>
+        <label for="filter">Enter Filter (SQL WHERE condition):</label>
+        <input type="text" id="filter" name="filter" placeholder="e.g., id > 10" />
+        <button type="submit">Visualize Data</button>
+    </form>
+
+    

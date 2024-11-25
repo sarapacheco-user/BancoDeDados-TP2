@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas - Funcionários</title>
+    <link rel="stylesheet" href="/funcionarios/styles.css">
+</head>
+<body>
+    <h1>Funcionários</h1>
+    <form action="/adicionar_funcionario" method="POST">
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+        <input type="number" name="sede_id" placeholder="ID da Sede" required>
+        <input type="number" step="0.01" name="salario" placeholder="Salário" required>
+        <input type="text" name="departamento" placeholder="Departamento" required>
+        <input type="date" name="data_nascimento" required>
+        <input type="date" name="data_admissao" required>
+        <input type="text" name="cargo" placeholder="Cargo" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Adicionar Funcionário</button>
+    </form>
+    
+    
+</body>
+</html>

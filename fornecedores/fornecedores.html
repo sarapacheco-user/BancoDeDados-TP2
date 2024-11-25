@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas - Adicionar Fornecedor</title>
+    <link rel="stylesheet" href="/fornecedores/styles.css">
+</head>
+<body>
+    <h1>Adicionar Novo Fornecedor</h1>
+    <form action="/app.py/a" method="POST">
+        <input type="text" name="nome_do_fornecedor" placeholder="Nome do Fornecedor" required>
+        <input type="text" name="cidade" placeholder="Cidade" required>
+        <input type="text" name="bairro" placeholder="Bairro" required>
+        <input type="number" name="lote" placeholder="Lote" required>
+        <input type="number" name="cep" placeholder="CEP" required>
+        <button type="submit">Adicionar Fornecedor</button>
+    </form>
+</body>
+</html>

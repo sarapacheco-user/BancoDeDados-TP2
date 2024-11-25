@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Sede</title>
+    <link rel="stylesheet" href="/sedes/styles.css">
+</head>
+<body>
+    <h1>Adicionar Nova Sede</h1>
+    <form action="{{ url_for('sedes.adicionar_sede') }}" method="POST">
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade" required>
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+
+        <label for="lote">Lote:</label>
+        <input type="text" id="lote" name="lote" placeholder="Digite o lote" required>
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" placeholder="Digite o CEP" required>
+
+        <button type="submit">Adicionar Sede</button>
+    </form>
+</body>
+</html>

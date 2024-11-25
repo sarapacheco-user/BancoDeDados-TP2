@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas - Adicionar Pedido</title>
+    <link rel="stylesheet" href="/pedidos/styles.css">
+</head>
+<body>
+    <h1>Adicionar Novo Pedido</h1>
+    <form action="http://127.0.0.1:5500/pedidos/adicionar_pedido" method="POST">
+        <input type="number" name="cliente_id" placeholder="ID do Cliente" required>
+        <input type="number" name="sede_id" placeholder="ID da Sede" required>
+        <input type="number" name="funcionario_que_auxiliou_id" placeholder="ID do Funcionário que Auxiliou" required>
+
+        <!-- Seção de produtos -->
+        <h2>Adicionar Produtos ao Pedido</h2>
+        <div id="produtos">
+            <div class="produto">
+                <input type="number" name="produto_id[]" placeholder="ID do Produto" required>
+                <input type="number" name="quantidade[]" placeholder="Quantidade" required>
+            </div>
+        </div>
+
+        <!-- Botão para adicionar mais produtos -->
+        <button type="button" onclick="adicionarProduto()">Adicionar Mais Produto</button>
+        
+        <br>
+        <button type="submit">Adicionar Pedido</button>
+    </form>
+
+    <script>
+        function adicionarProduto() {
+            // Cria um novo campo para adicionar mais produtos
+            const produtoDiv = document.createElement('div');
+            produtoDiv.classList.add('produto');
+            produtoDiv.innerHTML = `
+                <input type="number" name="produto_id[]" placeholder="ID do Produto" required>
+                <input type="number" name="quantidade[]" placeholder="Quantidade" required>
+            `;
+            document.getElementById('produtos').appendChild(produtoDiv);
+        }
+    </script>
+</body>
+</html>
